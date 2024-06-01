@@ -1,4 +1,4 @@
 # Master PCB circuitry
 
 - The entire PCB is self-designed.
-- Contact me if PCB gerber files are required.
+- Contact me via LinkedIn (https://www.linkedin.com/in/lim-wei-tatt-977472200/) if for more discussion about the Gerber files.
