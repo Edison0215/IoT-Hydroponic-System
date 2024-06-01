@@ -1,4 +1,5 @@
 #hydroponic_master.ino
+
 Description:
 - This code primarily uses the self-modified ECPH library to measure nutrient electrical conductivity (EC) and pH of the nutrient in the hydroponic system reservoir. 
 - Both parameters' measurement precision is improved from 12-bit to 16-bit when ADS1115 is applied. 
