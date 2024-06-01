@@ -69,6 +69,6 @@ Nutrient regulation commands:
 
 Description: 
 - This code is used to collect enviromental data such as light intensity, room humidity, water level, reservoir level, reservoir temperature, and surrounding temperature. (slave ESP32)
-- All these 6 data are delivered online to another ThingSpeak channel.
+- All these 6 data are delivered online to another ThingSpeak channel every 15 seconds.
 - It is also capable to obtain EC and pH readings from the first ThingSpeak channel used by master ESP32 to send both data.
 - All these data are accessed by the slave ESP32 to trigger the activation of actuators such as cooling fan, grow lights, nutrient pumps, water pumps, pH buffering pumps and reservoir pump.
