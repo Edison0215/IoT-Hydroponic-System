@@ -8,6 +8,7 @@
 
 # Other resources
   3D hydroponic system prototype: https://www.tinkercad.com/things/1ZtoJzCKCyX-hydroponic
+ 
   LinkedIn post about the project output: https://shorturl.at/Q7jfO
 
 
