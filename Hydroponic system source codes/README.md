@@ -1,7 +1,8 @@
-#hydroponic_master.ino
+
+#hydroponic_slave.ino
 
 Description:
-- This code primarily uses the self-modified ECPH library to measure nutrient electrical conductivity (EC) and pH of the nutrient in the hydroponic system reservoir. 
+- This code primarily uses the self-modified ECPH library to measure nutrient electrical conductivity (EC) and pH of the nutrient in the hydroponic system reservoir. (master ESP32)
 - Both parameters' measurement precision is improved from 12-bit to 16-bit when ADS1115 is applied. 
 - It can also send both readings to a ThingSpeak channel online every 15 seconds. 
 - Users need to calibrate the EC and pH probes before immersing them into the reservoir for real-time measurement.
@@ -59,3 +60,15 @@ Calibration criterion:
 - Calibration fails may be caused by contaminated calibration solutions.
 - Try again after replacing the calibration solutions.
 
+Nutrient regulation commands:
+- Prompt "ECPHDOWN" to activate the nutrient regulation process. (status changes from 0 to 1)
+- Prompt "ECPHUP" to deactivate the nutrient regulation process. (status changes from 1 to 0)
+- If status on OLED does not change, please check your internet connection.
+
+#hydroponic_slave.ino
+
+Description: 
+- This code is used to collect enviromental data such as light intensity, room humidity, water level, reservoir level, reservoir temperature, and surrounding temperature. (slave ESP32)
+- All these 6 data are delivered online to another ThingSpeak channel.
+- It is also capable to obtain EC and pH readings from the first ThingSpeak channel used by master ESP32 to send both data.
+- All these data are accessed by the slave ESP32 to trigger the activation of actuators such as cooling fan, grow lights, nutrient pumps, water pumps, pH buffering pumps and reservoir pump.
