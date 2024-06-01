@@ -2,7 +2,7 @@ Remark: Two ESP32s are implemented, namely master and slave.
 # hydroponic_master.ino
 
 Description:
-- This code primarily uses the self-modified ECPH library to measure nutrient electrical conductivity (EC) and pH of the nutrient in the hydroponic system reservoir. (master ESP32)
+- This code primarily uses the self-modified ECPH library to measure nutrient electrical conductivity (EC) and pH in the hydroponic system reservoir. (master ESP32)
 - Both parameters' measurement precision is improved from 12-bit to 16-bit when ADS1115 is applied. 
 - It can also send both readings to a ThingSpeak channel online every 15 seconds. 
 - Users need to calibrate the EC and pH probes before immersing them into the reservoir for real-time measurement.
@@ -36,7 +36,7 @@ Calibration procedure:
 24. Prompt "CALPH" on the serial monitor to calibrate the pH probe.
 25. Clean the pH probe.
 26. Immerse the pH probe into the reservoir.
-27. Prompt "EXITPH" on the serial monitor to exit pH calibration mode.
+27. After readings are stabilized, prompt "EXITPH" on the serial monitor to exit pH calibration mode.
 28. The message of "Transmitting data" and the lower rate of both readings displayed on the serial monitor indicate successful pH calibration (Online data transmission starts).
 
 Cleaning procedure:
@@ -55,7 +55,7 @@ Cleaning procedure:
 Calibration criterion:
 - EC calibration and pH calibration can be done regardless of its sequence.
 - calibration points for each parameter can be done regardless of their sequences.
-- 12.88 mS/cm: only successful when the uncalibrated EC readings are between 8 mS/cm and 16.8 mS/cm.
+- 12.88 mS/cm: only successful when the uncalibrated EC readings are between 8.0 mS/cm and 16.8 mS/cm.
 - 1.413 mS/cm: only successful when the uncalibrated EC readings are between 0.7 mS/cm and 1.8 mS/cm.
 - Calibration fails may be caused by contaminated calibration solutions.
 - Try again after replacing the calibration solutions.
@@ -63,7 +63,9 @@ Calibration criterion:
 Nutrient regulation commands:
 - Prompt "ECPHDOWN" to activate the nutrient regulation process. (status changes from 0 to 1)
 - Prompt "ECPHUP" to deactivate the nutrient regulation process. (status changes from 1 to 0)
-- If status on OLED does not change, please check your internet connection.
+- These 2 commands only affects the nutrient A pump, nutrient B pump, pH up pump and pH down pump.
+- Other actuators such as cooling fan, grow lights, reservoir pump and water pump are not affected.
+- If "ECPH" status on OLED does not change and regulation does not start when "ECPHDOWn" is promptede, please check your internet connection (reset the WiFi Dongle device and the slave ESP32).
 
 # hydroponic_slave.ino
 
@@ -71,4 +73,4 @@ Description:
 - This code is used to collect enviromental data such as light intensity, room humidity, water level, reservoir level, reservoir temperature, and surrounding temperature. (slave ESP32)
 - All these 6 data are delivered online to another ThingSpeak channel every 15 seconds.
 - It is also capable to obtain EC and pH readings from the first ThingSpeak channel used by master ESP32 to send both data.
-- All these data are accessed by the slave ESP32 to trigger the activation of actuators such as cooling fan, grow lights, nutrient pumps, water pumps, pH buffering pumps and reservoir pump.
+- All 8 data are accessed by the slave ESP32 to trigger the activation of actuators such as cooling fan, grow lights, nutrient pumps, water pumps, pH buffering pumps and reservoir pump.
