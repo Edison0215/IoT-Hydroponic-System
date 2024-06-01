@@ -1,4 +1,4 @@
-
+Remark: Two ESP32s are implemented, namely master and slave.
 # hydroponic_master.ino
 
 Description:
