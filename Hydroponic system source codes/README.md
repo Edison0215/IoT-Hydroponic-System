@@ -1,5 +1,5 @@
 
-#hydroponic_master.ino
+# hydroponic_master.ino
 
 Description:
 - This code primarily uses the self-modified ECPH library to measure nutrient electrical conductivity (EC) and pH of the nutrient in the hydroponic system reservoir. (master ESP32)
@@ -65,7 +65,7 @@ Nutrient regulation commands:
 - Prompt "ECPHUP" to deactivate the nutrient regulation process. (status changes from 1 to 0)
 - If status on OLED does not change, please check your internet connection.
 
-#hydroponic_slave.ino
+# hydroponic_slave.ino
 
 Description: 
 - This code is used to collect enviromental data such as light intensity, room humidity, water level, reservoir level, reservoir temperature, and surrounding temperature. (slave ESP32)
