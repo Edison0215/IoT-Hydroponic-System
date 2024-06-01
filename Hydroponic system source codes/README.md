@@ -1,5 +1,5 @@
 
-#hydroponic_slave.ino
+#hydroponic_master.ino
 
 Description:
 - This code primarily uses the self-modified ECPH library to measure nutrient electrical conductivity (EC) and pH of the nutrient in the hydroponic system reservoir. (master ESP32)
