@@ -6,4 +6,7 @@
 - 2 Custom PCBs and junction boxes are introduced in this project. 
 - Each directory consist of a README.md to describe functionalities of each sources codes and files.
 
+  3D hydroponic system prototype: https://www.tinkercad.com/things/1ZtoJzCKCyX-hydroponic
+  
+
 
