@@ -6,11 +6,11 @@
 - 2 Custom PCBs and junction boxes are introduced in this project. 
 - Each directory consists of a README.md to describe relevant sources codes.
 
-# Other resources
+## Declaration
+- The 2 orignal libraries are taken from https://github.com/greenponik/DFRobot_ESP_EC_BY_GREENPONIK and https://github.com/GreenPonik/DFRobot_ESP_PH_BY_GREENPONIK as references to produce the Modified DFRobot ECPH library.
+  
+### Other resources
   3D hydroponic system prototype: https://www.tinkercad.com/things/1ZtoJzCKCyX-hydroponic
  
   LinkedIn post about the project output: https://shorturl.at/Q7jfO
-  
-# Declaration
-- The 2 orignal libraries are taken from https://github.com/greenponik/DFRobot_ESP_EC_BY_GREENPONIK and https://github.com/GreenPonik/DFRobot_ESP_PH_BY_GREENPONIK as references to produce the Modified DFRobot ECPH library.
 
