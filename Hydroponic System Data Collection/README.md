@@ -7,7 +7,7 @@
 - Initially, data are collected via ThingSpeak at a rate of 15 seconds.
 - Data of each parameter are further processed to determine an average reading of 1 hour.
 - To manually install data from ThingSpeak at a rate of 1 hour from the ThingSpeak channel
-- For example, collecting hourly data of each environmental parameter on 14 February 2024, paste the link below in your Google browser:
+- For example, collecting hourly data of each environmental parameter on 14 February 2024, paste the link below in your web browser:
 ```https://api.thingspeak.com/channels/2320335/feeds.csv?start=2024-02-14&end=2024-02-15&average=60&timezone=Asia%2FKuala_Lumpur```
 - If you want to change to another day of data, just change the ```start data``` and ```end data``` of the link
 
